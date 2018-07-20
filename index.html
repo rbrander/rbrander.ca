@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92258770-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-92258770-2');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Rob Brander's personal website">
+  <meta name="keywords" content="rbrander, rob brander, coding, programming, javascript">
+  <meta name="theme-color" content="#aaaaff"/>
+  <link rel="canonical" href="https://rbrander.ca">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <title>Rob Brander | rbrander.ca</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial;
+      background-color: #14A0FF;
+    }
+
+    header {
+      border-bottom: 2px solid black;
+    }
+
+    a:link, a:visited {
+      color: black;
+    }
+    a:hover {
+      color: lightgrey;
+    }
+    a:active {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rob Brander</h1>
+  </header>
+  <div>
+    <p>Welcome to rbrander.ca, Rob Brander's personal website</p>
+    <p>You can find out more at <a href="http://rbrander.com">rbrander.com</a></p>
+  </div>
+  <script type="text/javascript">
+    // Register the service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+    }
+  </script>
+</body>
+</html>
