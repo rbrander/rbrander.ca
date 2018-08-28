@@ -22,7 +22,7 @@
       margin: 0;
       padding: 2rem;
       font-family: Arial;
-      background-color: #14A0FF;
+      background-color: #f7f7f7;
     }
 
     header {
@@ -38,6 +38,10 @@
     a:active {
       color: white;
     }
+    .top-border {
+      border-top: 1px solid black;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -48,7 +52,52 @@
     <p>Welcome to rbrander.ca, Rob Brander's personal website</p>
     <p>You can find out more at <a href="http://rbrander.com">rbrander.com</a></p>
     <br />
-    <p>I wrote a <a href="/maze-gen/">Maze Generator</a> API, UI, and solver</p>
+    <h2>Demos</h2>
+    <div>
+      Here you'll find some of my recent work. In my spare time I like to
+      code in JavaScript and HTML5, mostly the canvas.  These little projects
+      are often inspired by some other work I've seen.  When there is a source
+      for my inspiration, I'll often add it as a comment at the top of the
+      source code.
+    </div>
+    <div class="top-border">
+      <h3>Race Car</h3>
+      <p>A simple race car game, where you move the car over a background (race track)</p>
+      <p>
+        <strong>Demo: </strong>
+        <a href="https://rbrander.ca/race-car/">Race Car</a>
+      </p>
+      <p>
+        <strong>Source Code: </strong>
+        <a target="_blank" href="https://github.com/rbrander/race-car">GitHub</a>
+      </p>
+    </div>
+    <div class="top-border">
+      <h3>Connectors</h3>
+      <p>A demo to test mouse and touch events on the canvas, and a simple animation tween.</p>
+      <p>
+        <strong>Demo: </strong>
+        <a href="https://rbrander.ca/connectors/">Connectors!</a>
+      </p>
+      <p>
+        <strong>Source Code: </strong>
+        <a target="_blank" href="https://github.com/rbrander/connectors">GitHub</a>
+      </p>
+    </div>
+    <div class="top-border">
+      <h3>Maze Generator</h3>
+      <p>This is three demos in one! First the maze generator API was created.
+         Next, the UI rendering the maze; and a dynamic maze solver.
+      </p>
+      <p>
+        <strong>Demo: </strong>
+        <a href="https://rbrander.ca/maze-gen/">Maze-Gen</a>
+      </p>
+      <p>
+        <strong>Source Code: </strong>
+        <a target="_blank" href="https://github.com/rbrander/maze-gen">GitHub</a>
+      </p>
+    </div>
   </div>
 </body>
 </html>
