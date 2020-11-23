@@ -18,49 +18,74 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <title>Rob Brander | rbrander.ca</title>
   <style>
+    @font-face {
+      font-family: 'JetBrainsMono-Regular';
+      src: url('font/JetBrainsMono-Regular.eot'); /* IE9 Compat Modes */
+      src: url('font/JetBrainsMono-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('font/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+           url('font/JetBrainsMono-Regular.woff') format('woff') /* Pretty Modern Browsers */
+    }
+
     body {
       margin: 0;
       padding: 2rem;
-      font-family: Arial;
-      background-color: #f7f7f7;
+      font-family: 'JetBrainsMono-Regular', Arial;
+      background-color: #1E1E1E;
+      color: #ededed;
     }
 
-    header {
-      border-bottom: 2px solid black;
+    header { margin-bottom: 3rem; }
+    main { max-width: 800px; }
+    footer {
+      font-size: 0.8rem;
+      text-align: center;
+      border-top: 1px solid #ededed;
+      padding-top: 1.5rem;
+      margin: 3rem 4rem 0 4rem;
     }
 
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+    }
+    .title {
+      color: #5B9B4C;
+      font-size: 1rem;
+      font-weight: 400;
+    }
     a:link, a:visited {
-      color: black;
+      color: #ababab;
     }
     a:hover {
-      color: lightgrey;
+      color:white;
     }
     a:active {
-      color: white;
+      color: #ededed;
     }
-    .top-border {
-      border-top: 1px solid black;
-      margin-top: 1rem;
+    .demo-container {
+      border-top: 1px solid #ededed;
+      margin: 1rem 0;
+      padding: 1rem 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Rob Brander</h1>
+    <p class="name">Rob Brander</p>
+    <p class="title">// Software Developer & Architect</p>
   </header>
-  <div>
-    <p>Welcome to rbrander.ca, Rob Brander's personal website</p>
-    <p>You can find out more at <a href="http://rbrander.com">rbrander.com</a></p>
-    <br />
+  <main>
     <h2>Demos</h2>
     <div>
       Here you'll find some of my recent work. In my spare time I like to
-      code in JavaScript and HTML5, mostly the canvas.  These little projects
+      code in JavaScript and HTML5, mostly using the canvas.  These little projects
       are often inspired by some other work I've seen.  When there is a source
       for my inspiration, I'll often add it as a comment at the top of the
       source code.
     </div>
-    <div class="top-border">
+    <br />
+    <div class="demo-container">
       <h3>Slide Puzzle</h3>
       <p>A simple game where you slide pieces of the image to arrange in order</p>
       <p>
@@ -72,7 +97,7 @@
         <a target="_blank" href="https://github.com/rbrander/slide-puzzle">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Pixel Paint</h3>
       <p>A simple web-based javascript paint application</p>
       <p>
@@ -84,7 +109,7 @@
         <a target="_blank" href="https://github.com/rbrander/pixel-paint">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Bricks</h3>
       <p>A simple breakout clone created using javascript and the HTML canvas</p>
       <p>
@@ -96,9 +121,9 @@
         <a target="_blank" href="https://github.com/rbrander/bricks">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Random METAR</h3>
-      <p>A mobile-first Progressive-Web-Application that displays a METAR (Meteoroligcal Terminal Airport Report) for a random Canadian airport</p>
+      <p>A mobile-first Progressive-Web-Application that displays a METAR (Meteorological Terminal Airport Report) for a random Canadian airport</p>
       <p>
         <strong>Demo: </strong>
         <a href="https://rbrander.ca/METAR/">Random METAR</a>
@@ -108,7 +133,7 @@
         <a target="_blank" href="https://github.com/rbrander/RandomMETAR">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Ray Marching</h3>
       <p>A simple example of how ray marching works, using circles to trace the path</p>
       <p>
@@ -120,9 +145,9 @@
         <a target="_blank" href="https://github.com/rbrander/ray-marching">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Mower</h3>
-      <p>A simple game, where you attempt to mow all the leafs before the fox catches you.</p>
+      <p>A simple game, where you attempt to mow all the leaves before the fox catches you.</p>
       <p>
         <strong>Demo: </strong>
         <a href="https://rbrander.ca/mower/">Mower</a>
@@ -132,7 +157,7 @@
         <a target="_blank" href="https://github.com/rbrander/mower">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Race Car</h3>
       <p>A simple race car game, where you move the car over a background (race track)</p>
       <p>
@@ -144,7 +169,7 @@
         <a target="_blank" href="https://github.com/rbrander/race-car">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Connectors</h3>
       <p>A demo to test mouse and touch events on the canvas, and a simple animation tween.</p>
       <p>
@@ -156,7 +181,7 @@
         <a target="_blank" href="https://github.com/rbrander/connectors">GitHub</a>
       </p>
     </div>
-    <div class="top-border">
+    <div class="demo-container">
       <h3>Maze Generator</h3>
       <p>This is three demos in one! First the maze generator API was created.
          Next, the UI rendering the maze; and a dynamic maze solver.
@@ -170,6 +195,7 @@
         <a target="_blank" href="https://github.com/rbrander/maze-gen">GitHub</a>
       </p>
     </div>
-  </div>
+  </main>
+  <footer>Hand-crafted by Rob Brander &copy; 2020</footer>
 </body>
 </html>
