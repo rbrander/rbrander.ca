@@ -11,11 +11,12 @@
   </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="Rob Brander's personal website">
   <meta name="keywords" content="rbrander, rob brander, coding, programming, javascript">
   <link rel="canonical" href="https://rbrander.ca">
   <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="preload" href="/font/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <title>Rob Brander | rbrander.ca</title>
   <style>
     @font-face {
@@ -23,7 +24,8 @@
       src: url('font/JetBrainsMono-Regular.eot'); /* IE9 Compat Modes */
       src: url('font/JetBrainsMono-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
            url('font/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-           url('font/JetBrainsMono-Regular.woff') format('woff') /* Pretty Modern Browsers */
+           url('font/JetBrainsMono-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+      font-display: swap;
     }
 
     body {
@@ -37,9 +39,9 @@
     header { margin-bottom: 3rem; }
     main { max-width: 800px; }
     footer {
+      color: #A8A8A8;
       font-size: 0.8rem;
       text-align: center;
-      border-top: 1px solid #ededed;
       padding-top: 1.5rem;
       margin: 3rem 4rem 0 4rem;
     }
@@ -51,7 +53,7 @@
     }
     header .title {
       color: #5B9B4C;
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 400;
     }
     header ul {
@@ -71,8 +73,34 @@
     }
     .demo-container {
       border-top: 1px solid #ededed;
-      margin: 1rem 0;
       padding: 1rem 0;
+    }
+    .nav-list a {
+      text-decoration: none;
+    }
+
+    .button-container {
+      padding: 1rem 0;
+    }
+    .button {
+      border-radius: 0.5rem;
+      border: 1px solid #ededed;
+      background-color: #1e1e1e;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      .nav-list li {
+        display: block;
+        line-height: 2rem;
+      }
+      footer {
+        font-size: 0.6rem;
+        border-top: 1px solid #A8A8A8;
+        margin: 0;
+      }
     }
   </style>
 </head>
@@ -81,17 +109,17 @@
     <p class="name">Rob Brander</p>
     <p class="title">// Software Developer & Architect</p>
     <p class="links">
-      <ul>
-        <li><a href="https://www.github.com/rbrander/" target="_blank">[GitHub]</a></li>
-        <li><a href="https://www.linkedin.com/in/rbrander" target="_blank">[LinkedIn]</a></li>
-        <li><a href="https://codepen.io/rbrander/pens/public/" target="_blank">[CodePen]</a></li>
-        <li><a href="https://rbrander.github.io/" target="_blank">[GitHubPages]</a></li>
+      <ul class="nav-list">
+        <li><a href="https://www.github.com/rbrander/" rel="noopener" target="_blank">[ GitHub ]</a></li>
+        <li><a href="https://www.linkedin.com/in/rbrander" rel="noopener" target="_blank">[ LinkedIn ]</a></li>
+        <li><a href="https://codepen.io/rbrander/pens/public/" rel="noopener" target="_blank">[ CodePen ]</a></li>
+        <li><a href="https://rbrander.github.io/" rel="noopener" target="_blank">[ GitHub Pages ]</a></li>
       </ul>
     </p>
   </header>
   <main>
     <h2>Demos</h2>
-    <div>
+    <div style="padding-bottom: 1rem">
       Here you'll find some of my recent work. In my spare time I like to
       code in JavaScript and HTML5, mostly using the canvas.  These little projects
       are often inspired by some other work I've seen.  When there is a source
@@ -102,109 +130,73 @@
     <div class="demo-container">
       <h3>CYTZ Barometer</h3>
       <p>A web interface for displaying recent barometric pressure from Toronto Island Airport (CYTZ).</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/baro/">CYTZ Barometer</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/baro/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/baro">Source Code</a>
       </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/baro">GitHub</a>
-      </p>
-    </div>    
+    </div>
     <div class="demo-container">
       <h3>Slide Puzzle</h3>
       <p>A simple game where you slide pieces of the image to arrange in order</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/slide-puzzle/">Slide Puzzle</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/slide-puzzle">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/slide-puzzle/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/slide-puzzle">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Pixel Paint</h3>
       <p>A simple web-based javascript paint application</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/pixel-paint/">Pixel Paint</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/pixel-paint">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/pixel-paint/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/pixel-paint">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Bricks</h3>
       <p>A simple breakout clone created using javascript and the HTML canvas</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/bricks/">Bricks</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/bricks">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/bricks/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/bricks">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Random METAR</h3>
       <p>A mobile-first Progressive-Web-Application that displays a METAR (Meteorological Terminal Airport Report) for a random Canadian airport</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/METAR/">Random METAR</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/RandomMETAR">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/METAR/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/RandomMETAR">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Ray Marching</h3>
       <p>A simple example of how ray marching works, using circles to trace the path</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/ray-marching/">Ray Marching</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/ray-marching">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/ray-marching/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/ray-marching">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Mower</h3>
       <p>A simple game, where you attempt to mow all the leaves before the fox catches you.</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/mower/">Mower</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/mower">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/mower/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/mower">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Race Car</h3>
       <p>A simple race car game, where you move the car over a background (race track)</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/race-car/">Race Car</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/race-car">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/race-car/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/race-car">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
       <h3>Connectors</h3>
       <p>A demo to test mouse and touch events on the canvas, and a simple animation tween.</p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/connectors/">Connectors!</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/connectors">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/connectors/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/connectors">Source Code</a>
       </p>
     </div>
     <div class="demo-container">
@@ -212,16 +204,12 @@
       <p>This is three demos in one! First the maze generator API was created.
          Next, the UI rendering the maze; and a dynamic maze solver.
       </p>
-      <p>
-        <strong>Demo: </strong>
-        <a href="https://rbrander.ca/maze-gen/">Maze-Gen</a>
-      </p>
-      <p>
-        <strong>Source Code: </strong>
-        <a target="_blank" href="https://github.com/rbrander/maze-gen">GitHub</a>
+      <p class="button-container">
+        <a class="button" href="https://rbrander.ca/maze-gen/">Demo</a>
+        <a class="button" href="https://github.com/rbrander/maze-gen">Source Code</a>
       </p>
     </div>
   </main>
-  <footer>Hand-crafted by Rob Brander &copy; 2020</footer>
+  <footer>Hand-crafted by Rob Brander &copy; 2021</footer>
 </body>
 </html>
