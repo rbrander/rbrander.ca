@@ -28,6 +28,7 @@
       font-display: swap;
     }
 
+    /* dark theme by default */
     body {
       margin: 0;
       padding: 2rem;
@@ -100,6 +101,43 @@
         font-size: 0.6rem;
         border-top: 1px solid #A8A8A8;
         margin: 0;
+      }
+    }
+
+    /* light mode color overrides */
+    @media screen and (prefers-color-scheme: light) {
+      body {
+        background-color: #f2f2f2;
+        color: #333333;
+      }
+
+      footer {
+        color: #707070;
+      }
+
+      header .title {
+        color: #5B9B4C;
+      }
+
+      a:link, a:visited {
+        color: #555555;
+      }
+      a:hover {
+        color: #5B9B4C;
+      }
+      a:active {
+        color: #333333;
+      }
+
+      .button {
+        border: 1px solid #dddddd;
+        background-color: #f2f2f2;
+      }
+
+      @media only screen and (max-width: 768px) {
+        footer {
+          border-top: 1px solid #707070;
+        }
       }
     }
   </style>
